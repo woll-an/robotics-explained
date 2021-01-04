@@ -1,3 +1,5 @@
+import "katex/dist/katex.min.css"
+
 const baseTheme = {
   fonts: {
     mono: '"SF Mono", "Roboto Mono", Menlo, monospace',

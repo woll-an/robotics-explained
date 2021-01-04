@@ -156,34 +156,6 @@ export const baseStyles = css`
   .formElement svg path {
     fill: #2fd2c5;
   }
-  .searchInput {
-    width: 100%;
-    background-color: rgba(28,211,198,.12) !important;
-    border-width: 0 !important;
-    color: #C2C2C2;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    opacity: .6;
-    padding-left: 38px;
-    max-width: 600px;
-  }
-  .searchInput:focus,
-  .searchInput:visited,
-  .searchInput:hover,
-  .searchInput:focus-within {
-    outline: none;
-    border: 0;
-  }
-  .searchWrapper {
-    padding-left: 0px;
-    padding-right: 20px;
-    flex: 1;
-    position: relative;
-  }
-  .searchWrapper a {
-    font-weight: 500;
-  }
   .hitWrapper {
     background-color: #fff;
     padding: 0.7em 1em 0.4em;
@@ -739,9 +711,6 @@ export const baseStyles = css`
     .visibleMobileView {
       display: block !important;
     }
-    .searchInput {
-      color: #001934;
-    }
     .socialWrapper {
       position: absolute;
       right: 10px;
@@ -846,16 +815,6 @@ export const baseStyles = css`
       padding-left: 0 !important;
     }
 
-    .searchWrapper {
-      padding: 0px 0;
-      padding-top: 0px;
-      position: absolute;
-      bottom: 0px;
-      width: calc(100% - 70px);
-      position: absolute;
-      left: 40px;
-      top: 8px;
-    }
     .hitWrapper {
       width: 100%;
       right: 0;
@@ -888,9 +847,6 @@ export const baseStyles = css`
     }
     .navBarUL li a {
       padding: 10px 5px;
-    }
-    .searchWrapper {
-      padding-left: 0px;
     }
   }
 `;
