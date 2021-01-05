@@ -19,6 +19,13 @@ const plugins = [
     }
   },
   {
+    resolve: "gatsby-source-filesystem",
+    options: {
+      name: "docs",
+      path: `${__dirname}/images/`
+    }
+  },
+  {
     resolve: 'gatsby-plugin-mdx',
     options: {
       gatsbyRemarkPlugins: [
@@ -34,6 +41,9 @@ const plugins = [
         },
         {
           resolve: 'gatsby-remark-katex'
+        },
+        {
+          resolve: 'gatsby-remark-relative-images'
         }
       ],
       extensions: [".mdx", ".md"]

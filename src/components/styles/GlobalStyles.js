@@ -246,6 +246,7 @@ export const baseStyles = css`
     height: 80px;
   }
   .navBarHeader {
+    margin-right: auto;
     min-width: 335px;
     padding-right: 20px;
     display: flex;

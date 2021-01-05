@@ -33,6 +33,7 @@
     "gatsby-remark-copy-linked-files": "^2.1.33",
     "gatsby-remark-images": "^3.1.37",
     "gatsby-remark-katex": "^3.7.0",
+    "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^2.1.42",
     "gatsby-transformer-remark": "^2.6.42",
     "graphql": "^14.5.8",
