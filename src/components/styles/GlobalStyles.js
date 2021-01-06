@@ -311,34 +311,6 @@ export const baseStyles = css`
   .socialWrapper li a {
     display: contents;
   }
-  .discordBtn, .twitterBtn {
-    border-radius: 4px;
-    border: solid 1px #d1d2d3;
-    background-color: #f1f5f8;
-    width: 20px;
-    height: 20px;
-    padding-top: 2px;
-    margin-left: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: .8;
-    cursor: pointer;
-  }
-  .twitterBtn img {
-    width: 12px !important;
-  }
-  .discordBtn img {
-    width: 10px !important;
-  }
-  .discordBtn:hover, .twitterBtn:hover {
-    opacity: 1;
-  }
-  .discordBtn {
-    img {
-      width: 10px;
-    }
-  }
   /* Header section ends here */
   .sidebarTitle {
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
