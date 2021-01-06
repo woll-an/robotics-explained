@@ -13,10 +13,6 @@ export default class HTML extends React.Component {
           {config.siteMetadata.ogImage ? (
             <meta property="og:image" content={config.siteMetadata.ogImage} />
           ) : null}
-          <meta property="twitter:card" content="summary_large_image" />
-          {config.siteMetadata.ogImage ? (
-            <meta property="twitter:image" content={config.siteMetadata.ogImage} />
-          ) : null}
           {config.siteMetadata.favicon ? (
             <link rel="shortcut icon" type="image/svg" href={config.siteMetadata.favicon} />
           ) : null}

@@ -6,6 +6,8 @@ metaDescription: "This is the meta description"
 
 Let's look at a concrete example. Let's say we have a robot arm in a two-dimensional space with three links. Links are comparable to our bones. The links are connected by rotational joints. A rotational joint is like our elbow. If we move only the forearm, our hand makes a circular motion around the elbow. The last link of the robot is the so-called end-effector. The end-effector is designated to interact with the environment. It is comparable to our hand.
 
+<iframe src="https://condescending-yonath-40074b.netlify.app" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
+
 To make things easy, the robot can only move in a two-dimensional plane. We define the center of the first joint as the origin of the Cartesian space where x and y are zero. To the right of this origin is the positive x-dimension, to the top the positive y-dimension. When all joints are at zero (we will write this in the future as $q = [0,0,0]^T$), the tip of the end-effector is at (0.33 m, 0) with a rotation of 0 rad. This is because the first two links have a length of 0.15 m and the end-effector has a length of 0.03 m and all links form a long chain in x-direction (0.15 m + 0.15 m + 0.03 m = 0.33 m).
 
 If we move the first joint, the end-effector will make a circular movement around the origin. The tip of the end-effector will therefore be transformed depending on the angle of the first joint. To rotate a point counter clockwise by an angle phi, we can use a so-called rotation matrix to compute the transformed point.
