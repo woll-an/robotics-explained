@@ -14,8 +14,8 @@ const config = {
     collapsedNav: [
       '/control', // add trailing slash if enabled above
     ],
-    links: [{ text: 'Github', link: '' }],
-    frontline: false,
+    links: [{ text: 'Github', link: 'https://github.com/woll-an/robotics-explained' }],
+    frontline: true,
     ignoreIndex: true,
     title: '',
   },

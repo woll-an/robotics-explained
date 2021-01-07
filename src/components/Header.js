@@ -53,20 +53,16 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
             className={'headerTitle displayInline'}
             dangerouslySetInnerHTML={{ __html: "Robotics Explained" }}
           />
+          <DarkModeSwitch
+            className={'darkModeSwitch'}
+            isDarkThemeActive={isDarkThemeActive}
+            toggleActiveTheme={toggleActiveTheme}
+          />
         </div>
         <div id="navbar" className={'topnav'}>
           <div className={'visibleMobile'}>
             <Sidebar location={location} />
-            <hr />
           </div>
-          <ul className={'navBarUL navBarNav navBarULRight'}>
-            <li>
-              <DarkModeSwitch
-                isDarkThemeActive={isDarkThemeActive}
-                toggleActiveTheme={toggleActiveTheme}
-              />
-            </li>
-          </ul>
         </div>
       </nav>
       <StyledBgDiv isDarkThemeActive={isDarkThemeActive}>

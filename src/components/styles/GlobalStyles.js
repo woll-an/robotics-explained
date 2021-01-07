@@ -3,6 +3,7 @@ import { css } from '@emotion/core';
 export const baseStyles = css`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -38,7 +39,7 @@ export const baseStyles = css`
   }
 
   body {
-    font-family: 'Roboto';
+    font-family: 'Montserrat', 'Roboto';
   }
   .visibleMobile {
     display: none;
@@ -199,7 +200,6 @@ export const baseStyles = css`
     line-height: 1.5;
     font-weight: 300;
     color: #fff !important;
-    margin-top: 16px;
     text-transform: uppercase;
   }
   .headerTitle a {
@@ -216,7 +216,7 @@ export const baseStyles = css`
   }
 
   .logoContent {
-    font-family: 'Roboto';
+    font-family: 'Montserrat', 'Roboto';
     margin-left: 16px;
     font-size: 28px;
     line-height: 1.5;
@@ -248,6 +248,7 @@ export const baseStyles = css`
   .navBarHeader {
     margin-right: auto;
     min-width: 335px;
+    width: 100%;
     padding-right: 20px;
     display: flex;
     align-items: center;
@@ -259,7 +260,8 @@ export const baseStyles = css`
   }
 
   .navBarBrand img {
-    width: 120px;
+    max-width: 120px;
+    max-height: 60px;
     margin-right: 6px;
     display: inline-block;
   }
@@ -270,7 +272,7 @@ export const baseStyles = css`
     -webkit-overflow-scrolling: touch;
   }
   .navBarUL li a {
-    font-family: 'Roboto';
+    font-family: 'Montserrat', 'Roboto';
     color: #fff !important;
     font-size: 16px;
     font-weight: 500;
@@ -341,7 +343,7 @@ export const baseStyles = css`
   }
 
   .headerNav {
-    font-family: 'Roboto';
+    font-family: 'Montserrat', 'Roboto';
     padding: 0px 24px;
     color: #001933;
     font-size: 16px;
@@ -692,8 +694,6 @@ export const baseStyles = css`
     .responsive {
       margin-top: 15px;
       position: relative;
-      padding-bottom: 20px;
-      border-top: 1px solid #fff;
     }
     .headerTitle {
       padding-right: 50px;
