@@ -38,7 +38,7 @@ const config = {
       crossOrigin: 'use-credentials',
       icons: [
         {
-          src: 'src/pwa-512.png',
+          src: 'src/favicon.png',
           sizes: `512x512`,
           type: `image/png`,
         },

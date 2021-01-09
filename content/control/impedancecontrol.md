@@ -1,7 +1,7 @@
 ---
 title: "Impedance Control"
-metaTitle: "Syntax Highlighting is the meta title tag for this page"
-metaDescription: "This is the meta description for this page"
+metaTitle: "Controlling robots with impedance control"
+metaDescription: "This article explains how robots can be controlled with impedance control"
 ---
 
 In this chapter I explain what impedance control is about. Whenever robots are mentioned in this article, I have those consisting of links and joints in mind, with end-effectors to manipulate their environment.
