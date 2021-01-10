@@ -1,10 +1,10 @@
 ---
 title: "Transformation matrix"
-metaTitle: "This is the title tag of this page"
-metaDescription: "This is the meta description"
+metaTitle: "Transformation matrix | Robotics Explained"
+metaDescription: "This article is about trandformation matrices and why they are important in robotics."
 ---
 
-Let's look at a concrete example. Let's say we have a robot arm in a two-dimensional space with three links. Links are comparable to our bones. The links are connected by rotational joints. A rotational joint is like our elbow. If we move only the forearm, our hand makes a circular motion around the elbow. The last link of the robot is the so-called end-effector. The end-effector is designated to interact with the environment. It is comparable to our hand.
+Let's say we have a robot arm in a two-dimensional space with three links. Links are comparable to our bones. The links are connected by rotational joints. A rotational joint is like our elbow. If we move only the forearm, our hand makes a circular motion around the elbow. The last link of the robot is the so-called end-effector. The end-effector is designated to interact with the environment. It is comparable to our hand.
 
 <iframe src="https://condescending-yonath-40074b.netlify.app" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
