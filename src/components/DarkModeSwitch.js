@@ -50,7 +50,6 @@ const StyledSwitch = styled('div')`
     margin: auto 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    box-shadow: 0 0px 15px #2020203d;
     background: white url(${NightImage});
     background-repeat: no-repeat;
     background-position: center;

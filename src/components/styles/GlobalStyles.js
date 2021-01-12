@@ -79,7 +79,7 @@ export const baseStyles = css`
     margin-top: 4px;
     background-color: #001934;
   }
-  .navBarToggle .iconBar:first-child {
+  .navBarToggle .iconBar:first-of-type {
     margin-top: 0px;
   }
   .video-responsive iframe {
@@ -140,7 +140,6 @@ export const baseStyles = css`
 
   .headerWrapper {
     border-bottom: 1px solid rgb(212, 218, 223);
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
     display: flex;
     align-items: center;
   }
@@ -166,7 +165,6 @@ export const baseStyles = css`
     max-width: 30em;
     top: 40px;
     border: 1px solid #ccc;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
     height: auto;
     max-height: 80vh;
     overflow: scroll;
@@ -178,7 +176,7 @@ export const baseStyles = css`
     border-top: 1px solid;
     list-style-type: none;
   }
-  .hitWrapper ul li:first-child {
+  .hitWrapper ul li:first-of-type {
     border-top: 0px;
     margin-top: 0px;
     color: black !important;
@@ -229,17 +227,13 @@ export const baseStyles = css`
     padding: 0 !important;
   }
   .navBarDefault {
-    background-color: #001934;
+    background-color: #000b17;
     border-radius: 0;
     border-top: 0;
     margin-bottom: 0;
     border: 0;
     display: flex;
     align-items: center;
-    box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4);
-    -webkit-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4);
-    -moz-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.8);
-    -o-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4);
     z-index: 1;
     padding: 15px;
     position: relative;
@@ -315,7 +309,6 @@ export const baseStyles = css`
   }
   /* Header section ends here */
   .sidebarTitle {
-    /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
     background-color: #f8f8f8;
     padding: 18px 16px;
     font-family: 'Poppins';
@@ -394,17 +387,13 @@ export const baseStyles = css`
     right: 20px;
     z-index: 1;
     cursor: pointer;
+    height: 12px;
   }
 
   .hideFrontLine .active > a {
     background-color: #1ed3c6;
     color: #fff !important;
-  }
-  .firstLevel ul li .collapser svg path {
     fill: #fff !important;
-  }
-  .active .collapser > svg > path {
-    fill: #001933 !important;
   }
 
   .firstLevel ul .item ul .item {
@@ -525,7 +514,7 @@ export const baseStyles = css`
     padding: 0;
   }
 
-  table tr:nth-child(2n) {
+  table tr:nth-of-type(2n) {
     background-color: #f8f8f8;
   }
 
@@ -544,8 +533,8 @@ export const baseStyles = css`
     padding: 6px 13px;
   }
 
-  table tr th :first-child,
-  table tr td :first-child {
+  table tr th :first-of-type,
+  table tr td :first-of-type {
     margin-top: 0;
   }
 
@@ -692,7 +681,6 @@ export const baseStyles = css`
       top: 29px;
     }
     .responsive {
-      margin-top: 15px;
       position: relative;
     }
     .headerTitle {

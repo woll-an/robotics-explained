@@ -24,7 +24,6 @@ export const StyledNextPrevious = styled('div')`
     border-radius: 3px;
     border: 1px solid rgb(230, 236, 241);
     transition: border 200ms ease 0s;
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
     text-decoration: none;
 
     background-color: ${props => props.theme.colors.background};
@@ -46,7 +45,6 @@ export const StyledNextPrevious = styled('div')`
     border-radius: 3px;
     border: 1px solid rgb(230, 236, 241);
     transition: border 200ms ease 0s;
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
     text-decoration: none;
 
     background-color: ${props => props.theme.colors.background};

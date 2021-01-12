@@ -15,12 +15,13 @@ const Wrapper = styled('div')`
 
   .sideBarUL li a {
     color: ${({ theme }) => theme.colors.text};
+    fill: ${({ theme }) => theme.colors.text};
   }
 
   .sideBarUL .item > a:hover {
     background-color: #1ed3c6;
     color: #fff !important;
-
+    fill: #fff !important;
     /* background: #F8F8F8 */
   }
 

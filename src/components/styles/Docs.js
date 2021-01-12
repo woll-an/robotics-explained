@@ -29,7 +29,6 @@ export const Edit = styled('div')`
     text-decoration: none;
     color: rgb(36, 42, 49);
     background-color: rgb(255, 255, 255);
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
     height: 30px;
     padding: 5px 16px;
     &:hover {

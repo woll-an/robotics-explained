@@ -54,3 +54,12 @@ sin(\phi) & cos(\phi) & y \\
 $$
 
 We can now compute the position of the end-effector by multiplying it with the transformation matrix.
+
+$$
+T(x,y,\phi)
+= \begin{bmatrix}
+cos(\phi) & - sin(\phi) & x \\
+sin(\phi) & cos(\phi) & y \\
+0 & 0 & 1
+\end{bmatrix}
+$$

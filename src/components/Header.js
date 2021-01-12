@@ -23,7 +23,6 @@ function myFunction() {
 
 const StyledBgDiv = styled('div')`
   height: 60px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #f8f8f8;
   position: relative;
   display: none;

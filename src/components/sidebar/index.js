@@ -71,6 +71,7 @@ const Sidebar = styled('aside')`
   @media only screen and (max-width: 767px) {
     padding-left: 0px;
     height: auto;
+    -webkit-box-shadow: none
   }
 `;
 
