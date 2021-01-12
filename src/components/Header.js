@@ -73,9 +73,11 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
             role="button"
             tabIndex={0}
           >
-            <span className={'iconBar'}></span>
-            <span className={'iconBar'}></span>
-            <span className={'iconBar'}></span>
+            <svg viewBox="0 0 100 80" width="26" height="18">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
           </span>
         </div>
       </StyledBgDiv>

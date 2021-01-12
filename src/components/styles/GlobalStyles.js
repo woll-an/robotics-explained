@@ -407,6 +407,7 @@ export const baseStyles = css`
 
   .sideBarUL .item > a {
     color: #1ED3C6;
+    fill: #1ED3C6;
     text-decoration: none;
     display: flex;
     align-items: center;
