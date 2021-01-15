@@ -1,6 +1,6 @@
 ---
 title: "Impedance Control"
-metaTitle: "Controlling robots with impedance control"
+metaTitle: "Impedance Control| Robotics Explained"
 metaDescription: "This article explains how robots can be controlled with impedance control"
 ---
 
@@ -11,7 +11,7 @@ In this chapter I explain what impedance control is about. Whenever robots are m
 Let’s start with the definition of impedance.
 Mechanical impedance is a measure how much a structure resists motion when subjected to a (harmonic) force. The inverse of the impedance is admittance. It is the ratio of velocity to force. You can think of pushing a child’s swing with a certain frequency. The lower the admittance of the swing, the more force is necessary to reach the same velocity of the swing. A swing with a very high admittance would just need a tiny little push and the child would swing up to the sky. Wheeee!
 
-![swing](../../images/impedance/swing.png "Swing")
+![swing](../images/impedance/swing.png "Swing")
 
 So let’s introduce some formulas. Z is the impedance, F is the force and v is the velocity. Whenever we have a force as an input we talk of impedance, i.e. $F = Z \cdot v$. Whenever we have a velocity as an input we talk of admittance, i.e. $v = Z^{-1}\cdot F$.
 
