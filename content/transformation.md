@@ -44,7 +44,7 @@ The robot with one moving joint has a degree of freedom of one. This means we ca
 
 We are now able to compute every point the end-effector can reach by moving the first joint. But these points lie all in a circle around the base point, which is not very useful for a robot. We want to be able to reach every point with an arbitrary rotation of the end-effector.
 
-Let's look at what happens if we only move the second joint. The tip of the end-effector rotates now around this joint. We can therefore use a similar rotation matrix as the one for the first joint. But additional to this rotation, we have a translation of the center of this point by $[0.15m, 0]^T$. How can we now compute the position of the end-effector? We can use a *transformation matrix* which combines rotation and translation in a single 3x3 matrix. It consists of the rotation matrix, the translation vector and $[0,0,1]$ in the last row. The last row seems to be unnecessary, but you will see soon, that it comes very handy!
+Let's look at what happens if we only move the second joint. The tip of the end-effector rotates now around this joint. We can therefore use a similar rotation matrix as the one for the first joint. But additional to this rotation, we have a translation of the center of this point by $[0.15m, 0]^T$. How can we now compute the position of the end-effector? We can use a *transformation matrix* which combines rotation and translation in a single 3x3 matrix. It consists of the rotation matrix, the translation vector $[x,y]^T$ and $[0,0,1]$ in the last row. The last row seems to be unnecessary, but you will see soon, that it comes very handy!
 
 $$
 T(x,y,\phi)
