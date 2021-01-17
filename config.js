@@ -25,7 +25,7 @@ const config = {
     description: 'A course about robotics',
     ogImage: null,
     docsLocation: '',
-    favicon: '',
+    favicon: 'src/favicon.png',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
