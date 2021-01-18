@@ -6,17 +6,34 @@ metaDescription: "This article explains what robot poses are and why they are im
 
 # The Cartesian space
 
-Imagine you want to meet a friend in the city. You might write a message saying "Hey, let's meet in the park at the bench near the entrance by the church." Twenty minutes later, your friend arrives at the said bench. Great!
+Imagine you call your friend.  
+You: "Hey, where are you?"  
+Friend: "I'm in the park at the bench near the entrance by the church."  
+You: "Cool, I will be there in twenty minutes"  
 
 ![park](../images/robotposes/park.png "Park")
 
-Now imagine you want your robotic arm to pick up a red ball: "Hey, pick up the red ball in the second tray, just left to the green ball" Nothing happens. But why? It is such an easy task. Your four year old niece would be able to do it! But robot and you, you just don't speak the same language. You describe a position in the world based on some distinctive points. In the first scenerio, you rely on your friend's knowledge about these points and your friend's ability to identify them. The robot has neither the knowledge nor the sensors to be able to identify the distinctive points you were referring to.
+The next day you call your robot.  
+You: "Hey, where are you?"  
+Robot: "I'm at $[0.1rad, 0.5rad, 0]^T$"  
+You: "Cool, I will be there in... Wait, where are you?"  
 
-Imagine you want to meet your friend in the middle of a desert. "Hey, let's meet at a grey rock near some dune!" might be problematic, as you both don't have knowledge about the region and you cannot rely on your sensors (i.e. eyes) to identify rocks and dunes correctly as they all might look similar and the environment will change in the desert due to wind and other environmental conditions.
+Robot and you, you just don't speak the same language. In the first dialogue, your friend describeda position in the world based on some distinctive points. They rely on your knowledge about these points and your ability to identify them. The robot has neither the knowledge nor the sensors to be able to identify the distinctive points you were referring to. But what happens if we change the scenario?
+
+You: "Hey, where are you?"  
+Friend: "I'm in the middle of the desert besides a grey rock near a dune."  
+You: "Cool, I will be there in... Wait, where are you?"  
 
 ![desert](../images/robotposes/desert.png "Desert")
 
-What do you do? You both take a GPS device and say "Let's meet at 22°13'27.8"N 22°06'55.7"E" Twenty hours later, your friend arrives at the said point. Great! What changeg? You used a system which specifies exactly each point on the surface of the earth and a device which translates your state into the language of the system.
+In this scenario you both don't have knowledge about the region and you cannot rely on your sensors (i.e. eyes) to identify rocks and dunes correctly as they all might look similar and the environment will change in the desert due to wind and other environmental conditions.
+
+What do you do?  
+You: "Hey, where are you?"
+Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"
+You: "Cool, I will be there in twenty hours."
+
+You both take a GPS device and and twenty hours later, you arrive at the said point. Great! What changed? You used a system which specifies exactly each point on the surface of the earth and a device which translates your state into the language of the system.
 
 We can talk in a similar way to robots. This means we take the space in which the robot can move and use a system which is able to describe every point within this space. In robotics, we often use the *Cartesian space*. This is just a fancy name for the well known coordinate system with an x- and y-axes (and z-axes in three dimensional space) we draw a thousand times in school.
 
@@ -36,4 +53,4 @@ The end-effector cannot move without changing one of these values. If the end-ef
 
 # Robot kinematics
 
-"Alright, robot!", you say, "Move to (0.1 m, 0.53 m) with a rotation of 1.4 rad!" Nothing happens. But why? If someone would tell us "Move to 22°13'27.8"N 22°06'55.7"E" we would not be able to achieve this without a device which measures for us where we are. This is the same for the robot. GPS is too inaccurate for most tasks to determine where the tip of the end-effector is located. Imagine we have a robot which should put dishes into the dishwasher. Even an (in)accuracy of 10 cm could result in throwing dishes on the floor. Even though there exist sensors which are able to accurately measure the position of the end-effector, they are often quite expensive. But there are other solutions! For a stationary robot, e.g. a robot arm, we can compute the pose of the endeffector by taking into account the geometry of the robot and the state of the motors. This is comparable to predicting the pose of our left index finger by measuring the contraction of every muscle and the length of every bone in our body. The relationship between the geometry of the robot and its movement in the Cartesian space is called *kinematics*. Before we can dive into kinematics though, we need to understand transformation matrices.
+If someone would tell us "Move to 22°13'27.8"N 22°06'55.7"E" we would not be able to achieve this without a device which measures for us where we are. This is the same for the robot. GPS is too inaccurate for most tasks to determine where the tip of the end-effector is located. Imagine we have a robot which should put dishes into the dishwasher. Even an (in)accuracy of 10 cm could result in throwing dishes on the floor. Even though there exist sensors which are able to accurately measure the position of the end-effector, they are often quite expensive. But there are other solutions! For a stationary robot, e.g. a robot arm, we can compute the pose of the endeffector by taking into account the geometry of the robot and the state of the motors. This is comparable to predicting the pose of our left index finger by measuring the contraction of every muscle and the length of every bone in our body. The relationship between the geometry of the robot and its movement in the Cartesian space is called *kinematics*. Before we can dive into kinematics though, we need to understand transformation matrices.
