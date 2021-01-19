@@ -66,7 +66,7 @@ By multiplying all these transformation matrices, we get $T(q)_{O,ee}$, the tran
 Given the configuration of the robot, we can now compute the Cartesian coordinates of the tip of the end-effector! This is called *forwards kinematics*. Please take a moment to think about what we just achieved with such a transformation! We are now able to understand our robot when we ask where it is, because it is able to translate its inner configuration into a system which has a meaning for us.
 
 You: "Hey, where are you?"  
-Robot: "I'm at $(0.5m, 0.1m)$ with a rotation of $0.75 rad$. The origin is the center of my first joint"  
+Robot: "I'm at (0.5m, 0.1m) with a rotation of 0.75 rad. The origin is the center of my first joint"  
 You: "Cool, I will be there in a second"
 
-
+![touch](../images/kinematics/touch.png "Touch")
