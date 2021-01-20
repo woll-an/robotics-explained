@@ -1,6 +1,6 @@
 ---
 title: "Impedance Control"
-metaTitle: "Impedance Control| Robotics Explained"
+metaTitle: "Impedance Control | Robotics Explained"
 metaDescription: "This article explains how robots can be controlled with impedance control"
 ---
 

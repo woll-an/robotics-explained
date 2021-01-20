@@ -7,16 +7,16 @@ metaDescription: "This article explains what robot poses are and why they are im
 # The Cartesian space
 
 Imagine you call your friend.  
-You: "Hey, where are you?"  
-Friend: "I'm in the park at the bench near the entrance by the church."  
-You: "Cool, I will be there in twenty minutes"  
+>You: "Hey, where are you?"  
+>Friend: "I'm in the park at the bench near the entrance by the church."  
+>You: "Cool, I will be there in twenty minutes"  
 
 ![park](../images/robotposes/park.png "Park")
 
 The next day you call your robot.  
-You: "Hey, where are you?"  
-Robot: "I'm at $[0.1rad, 0.5rad, 0]^T$"  
-You: "Cool, I will be there in... Wait, where are you?"  
+>You: "Hey, where are you?"  
+>Robot: "I'm at $[0.1rad, 0.5rad, 0]^T$"  
+>You: "Cool, I will be there in... Wait, where are you?"  
 
 Robot and you, you just don't speak the same language. In the first dialogue, your friend describeda position in the world based on some distinctive points. They rely on your knowledge about these points and your ability to identify them. The robot has neither the knowledge nor the sensors to be able to identify the distinctive points you were referring to. But what happens if we change the scenario?
 
@@ -29,9 +29,9 @@ You: "Cool, I will be there in... Wait, where are you?"
 In this scenario you both don't have knowledge about the region and you cannot rely on your sensors (i.e. eyes) to identify rocks and dunes correctly as they all might look similar and the environment will change in the desert due to wind and other environmental conditions.
 
 What do you do?  
-You: "Hey, where are you?"
-Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"
-You: "Cool, I will be there in twenty hours."
+>You: "Hey, where are you?"
+>Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"
+>You: "Cool, I will be there in twenty hours."
 
 You both take a GPS device and and twenty hours later, you arrive at the said point. Great! What changed? You used a system which specifies exactly each point on the surface of the earth and a device which translates your state into the language of the system.
 
