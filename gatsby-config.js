@@ -52,44 +52,36 @@ const plugins = [
     resolve: `gatsby-plugin-gtag`,
     options: {
       // your google analytics tracking id
-      trackingId: config.gatsby.gaTrackingId,
+      trackingId: '',
       // Puts tracking script in the head instead of the body
       head: true,
       // enable ip anonymization
       anonymize: false,
     },
   },
-];
-// check and add pwa functionality
-if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
-  plugins.push({
-      resolve: `gatsby-plugin-manifest`,
-      options: {...config.pwa.manifest},
-  });
-  plugins.push({
-    resolve: 'gatsby-plugin-offline',
+  {
+    resolve: `gatsby-plugin-manifest`,
     options: {
-      appendScript: require.resolve(`./src/custom-sw-code.js`),
-    },
-  });
-} else {
-  plugins.push('gatsby-plugin-remove-serviceworker');
-}
-
-// check and remove trailing slash
-if (config.gatsby && !config.gatsby.trailingSlash) {
-  plugins.push('gatsby-plugin-remove-trailing-slashes');
-}
+      icon: `images/favicon.png`,
+      name: `Robotics Explained`,
+      short_name: `RobExpl`,
+      start_url: `/`,
+      background_color: `#f7f0eb`,
+      theme_color: `#a2466c`,
+      display: `standalone`,
+    }
+  },
+];
 
 module.exports = {
-  pathPrefix: config.gatsby.pathPrefix,
+  pathPrefix: '/',
   siteMetadata: {
-    title: config.siteMetadata.title,
-    description: config.siteMetadata.description,
+    title: 'Robotics Explained | Robot Course',
+    description: 'A course about robotics',
     docsLocation: config.siteMetadata.docsLocation,
     ogImage: config.siteMetadata.ogImage,
-    favicon: config.siteMetadata.favicon,
-    siteUrl: config.gatsby.siteUrl,
+    favicon: 'images/favicon.png',
+    siteUrl: 'https://robotics-explained.com',
   },
   plugins: plugins
 };
