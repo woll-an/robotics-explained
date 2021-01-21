@@ -13,6 +13,9 @@ export default class HTML extends React.Component {
           {config.siteMetadata.title ? (
             <meta property="og:title" content={config.siteMetadata.title} />
           ) : null }
+          {config.siteMetadata.title ? (
+            <title>{config.siteMetadata.title}</title>
+          ) : null }
           {config.siteMetadata.ogImage ? (
             <meta property="og:image" content={config.siteMetadata.ogImage} />
           ) : null}
