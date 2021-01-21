@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'http://localhost:8000/',
+    siteUrl: 'https://robotics-explained.com/',
     gaTrackingId: null,
     trailingSlash: false,
   },

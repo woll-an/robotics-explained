@@ -8,15 +8,19 @@ Kinematics is the relationship between the geometry of the robot and its movemen
 
 One quick note about the notation: In the literature you often find a distinction between the rotation of the motor - $\theta$ - and the rotation of the joint - $q$. Depending on the construction of the robot they might or might not be identical. I will use mainly the rotation of the joint, but don't hesitate to think about an actual motor rotating, because it might be more intuitive for you.
 
+# Chaining Transformations
+
 Back to the main problem: Our goal is to develop a transformation matrix $T(q)_{O,ee}$ which allows us to compute the pose of the end-effector given the configuration of the robot. $T_{O,ee}$ is the transformation from the origin (O) to the end-effector (ee).
 
-As we learned in the article about [transformation matrices](http://localhost:8000/transformation) we can construct the transformation matrix by chaining multiple transformation matrices, for our robot arm i.e.
+As we learned in the article about [transformation matrices](/transformation) we can construct the transformation matrix by chaining multiple transformation matrices, for our robot arm i.e.
 
 $$T(q)_{O,ee} = T(q_0)_{O,0} \cdot T(q_0)_{0,1} \cdot T(q_0)_{1,2} \cdot T_{2,ee}$$
 
 Each of these transformations are simple rotations and translations depending on the joint angle and the link length.
 
 <iframe src="https://condescending-yonath-40074b.netlify.app" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
+
+# Transformations for each joint
 
 1. Joint 0: This transforamtion is actually quite simple, as we chose the origin of the workspace to be identical with the position of the first joint. We therefore have no translation. The rotation is determind by the rotation of the first joint, $q_0$.
 

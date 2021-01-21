@@ -35,7 +35,7 @@ const StyledBgDiv = styled('div')`
 
 const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
   const logoImg = require('./images/logo.svg');
-  const logoLink = 'todo:logo-link';
+  const logoLink = 'https://robotics-explained.com';
 
   return (
     <div className={'navBarWrapper'}>

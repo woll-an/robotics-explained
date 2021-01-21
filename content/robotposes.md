@@ -15,7 +15,7 @@ Imagine you call your friend.
 
 The next day you call your robot.  
 >You: "Hey, where are you?"  
->Robot: "I'm at $[0.1rad, 0.5rad, 0]^T$"  
+>Robot: "I'm at $[0.1, 0.5, 0]^T$"  
 >You: "Cool, I will be there in... Wait, where are you?"  
 
 Robot and you, you just don't speak the same language. In the first dialogue, your friend describeda position in the world based on some distinctive points. They rely on your knowledge about these points and your ability to identify them. The robot has neither the knowledge nor the sensors to be able to identify the distinctive points you were referring to. But what happens if we change the scenario?
