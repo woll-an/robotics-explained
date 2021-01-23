@@ -52,7 +52,7 @@ const plugins = [
     resolve: `gatsby-plugin-gdpr-cookies`,
     options: {
       googleAnalytics: {
-        trackingId: 'G-M8QHGMRE4H',
+        trackingId: 'UA-187924281-1',
         cookieName: 'gatsby-gdpr-google-analytics', // default
         // Setting this parameter is optional
         anonymize: true
