@@ -31,7 +31,7 @@ If the bag would have an infinite mass, there would be no motion at all. Instead
 
 Now imagine you are not in the boxing gym, but on the bottom of a deep lake. Each punch now is muuuuch slower, because your motion is damped. The damping force is proportional to the velocity, i.e. $F=-c \cdot v$. The faster your hand moves, the more force is needed to move your fist.
 
-![water](../images/impedance/bag.png "Water")
+![water](../images/impedance/water.png "Water")
 
 Describing the robot as a mass-spring-damper system, we can express the relationship between force and velocity (i.e. the impedance) as $F=M\cdot a + C \cdot v + K \cdot x$. Note: There are still acceleration $a$ and position $x$ in our equation, which are derivative and integral of the velocity respectively. Expressing our formula in the Laplace domain, we get $F(s)=(Ms+C+Ks^{-1})\cdot v$, with the impedance $Z = Ms+C+Ks^{-1}$.
 
@@ -43,7 +43,7 @@ Let’s compare impedance control to other control strategies, i.e. position con
 
 You might wonder why we do not use force control instead. Force control behaves poorly, if the robot’s end-effector is not in contact with another object, as forces will lead to fast movements. Think of walking up a stair, erroneously believing that there is one additional step at the end. You move your foot up and try to push it onto the step. Because no contact is established your food moves down very fast and you have to struggle to keep your balance.
 
-![stair](../images/impedance/bag.png "Stair")
+![stair](../images/impedance/stair.png "Stair")
 
 The same is true for a robot trying to apply a force when its end-effector is not in contact with a surface. The big advantage of impedance control is the possibility to control the motion and the force of the robot’s end-effector at the same time!
 

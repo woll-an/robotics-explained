@@ -18,11 +18,11 @@ The next day you call your robot.
 >Robot: "I'm at $[0.1, 0.5, 0]^T$"  
 >You: "Cool, I will be there in... Wait, where are you?"  
 
-Robot and you, you just don't speak the same language. In the first dialogue, your friend describeda position in the world based on some distinctive points. They rely on your knowledge about these points and your ability to identify them. The robot has neither the knowledge nor the sensors to be able to identify the distinctive points you were referring to. But what happens if we change the scenario?
+Robot and you, you just don't speak the same language. In the first dialogue, your friend describeda position in the world based on some distinctive points. They rely on your knowledge about these points and your ability to identify them. The robot has neither the knowledge nor the sensors to be able to identify distinctive points. But what happens if we change the scenario?
 
-You: "Hey, where are you?"  
-Friend: "I'm in the middle of the desert besides a grey rock near a dune."  
-You: "Cool, I will be there in... Wait, where are you?"  
+>You: "Hey, where are you?"  
+>Friend: "I'm in the middle of the desert besides a grey rock near a dune."  
+>You: "Cool, I will be there in... Wait, where are you?"  
 
 ![desert](../images/robotposes/desert.png "Desert")
 
@@ -33,13 +33,13 @@ What do you do?
 >Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"
 >You: "Cool, I will be there in twenty hours."
 
-You both take a GPS device and and twenty hours later, you arrive at the said point. Great! What changed? You used a system which specifies exactly each point on the surface of the earth and a device which translates your state into the language of the system.
+You take a GPS device and and twenty hours later, you arrive at the said point. Great! What changed? You used a system which specifies exactly each point on the surface of the earth and a device which translates your state into the language of this system.
 
-We can talk in a similar way to robots. This means we take the space in which the robot can move and use a system which is able to describe every point within this space. In robotics, we often use the *Cartesian space*. This is just a fancy name for the well known coordinate system with an x- and y-axes (and z-axes in three dimensional space) we draw a thousand times in school.
+We can talk in a similar way to robots. We take the space in which the robot can move - the *workspace* - and use a system which is able to describe every point within this space. In robotics, we often use the *Cartesian space*. This is just a fancy name for the well known coordinate system with an x- and y-axes (and z-axes in three dimensional space) we draw a thousand times in school.
 
 # Robot poses and degrees of freedom
 
-Within the Cartesian space, we are able to name a point, where the robot should move to. It is often not only important to which position the robot moves but also from which direction a robot's tool points to a position. Imagine for example a robot equipped with a drilling machine. It matters in which direction the hole is drilled, not just at which position. Or a mobile robot which should park in a parking lot. If the rotation of the robot is wrong the owners from the adjacent cars won't be amused.
+Within the Cartesian space, we are able to name a point where the robot should move to. It is often not only important to which position the robot moves but also from which direction a robot's tool points to a position. Imagine for example a robot equipped with a drilling machine. It matters in which direction the hole is drilled, not just at which position. Or a mobile robot which should park in a parking lot. If the rotation of the robot is wrong the owners from the adjacent cars won't be amused.
 
 ![cars](../images/robotposes/car.png "Cars")
 
