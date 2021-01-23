@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 
 import CookieConsent from 'react-cookie-consent';
+import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies'
 import ThemeProvider from './theme/themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
@@ -71,6 +72,7 @@ const Layout = ({ children, location }) => (
         <CookieConsent
             location="bottom"
             buttonText="Accept"
+            onAccept={()=>initializeAndTrack(location)}
             declineButtonText="Decline"
             enableDeclineButton
             flipButtons
