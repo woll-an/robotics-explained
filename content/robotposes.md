@@ -29,9 +29,9 @@ Robot and you, you just don't speak the same language. In the first dialogue, yo
 In this scenario you both don't have knowledge about the region and you cannot rely on your sensors (i.e. eyes) to identify rocks and dunes correctly as they all might look similar and the environment will change in the desert due to wind and other environmental conditions.
 
 What do you do?  
->You: "Hey, where are you?"
->Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"
->You: "Cool, I will be there in twenty hours."
+>You: "Hey, where are you?"  
+>Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"  
+>You: "Cool, I will be there in twenty hours."  
 
 You take a GPS device and and twenty hours later, you arrive at the said point. Great! What changed? You used a system which specifies exactly each point on the surface of the earth and a device which translates your state into the language of this system.
 

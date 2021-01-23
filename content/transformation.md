@@ -44,7 +44,7 @@ sin(0.5) & cos(0.5) \\
 \end{bmatrix}
 $$
 
-The robot with one moving joint has a degree of freedom of one. This means we can choose only the value of one of the three degrees of freedom of the two-dimensional space, the other ones are fixed. If we want to move e.g. to y = 0.33, x has to be 0 and the orientation has to be 0.5 $\pi$. If we want a rotation of 0.5, x has to be 0.28 and y has to be 0.16. We are not able to move e.g. to y=0.33 and x=0.1.
+The robot with one moving joint has a degree of freedom of one. This means we can choose only the value of one of the three degrees of freedom of the two-dimensional space, the other ones are fixed. If we want to move e.g. to y = 0.33, x has to be 0 and the orientation has to be 0.5 $\pi$. If we want a rotation of 0.5, x has to be 0.28 and y has to be 0.16. We are not able to move e.g. to y = 0.33 and x = 0.1.
 
 # Transformation matrix
 
@@ -54,7 +54,7 @@ Let's look at what happens if we only move the second joint.
 
 <iframe src="https://kinematics.robotics-explained.com?q0=0&q2=0" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
-The tip of the end-effector rotates now around this joint with a smaller radius than before. We can therefore use a similar rotation matrix as the one for the first joint. But additional to this rotation, we have a translation of the center of this point by $[0.15, 0]^T$. How can we now compute the position of the end-effector? We can use a *transformation matrix* which combines rotation and translation in a single 3x3 matrix. It consists of the rotation matrix, the translation vector $[x,y]^T$ and $[0,0,1]$ in the last row. The last row seems to be unnecessary, but you will see soon, that it comes very handy!
+The tip of the end-effector rotates now around this joint with a smaller radius than before. We can therefore use a similar rotation matrix as the one for the first joint. But additional to this rotation, we have a translation of the center of this point by $[0.15,0]^T$. How can we now compute the position of the end-effector? We can use a *transformation matrix* which combines rotation and translation in a single 3x3 matrix. It consists of the rotation matrix, the translation vector $[x,y]^T$ and $[0,0,1]$ in the last row. The last row seems to be unnecessary, but you will see soon, that it comes very handy!
 
 $$
 T(x,y,\phi)
@@ -65,7 +65,7 @@ sin(\phi) & cos(\phi) & y \\
 \end{bmatrix}
 $$
 
-We can now compute the position of the end-effector by multiplying it with the transformation matrix for our first joint. Let's say we want to rotate the second joint by 0.5. In the transformation matrix we replace $\phi$ with 0.5, x with 0.15 and y with 0. Why 0.15 and 0 for x and y? This is the position of the second joint. The initial point of the end-effector is the same as before, i.e. (0.33, 0), but as the first link of the robot is included in the transformation, our point is now $(0.33-0.15,0) = (0.18,0)$. To be able to multiply it with a 3x3 matrix, we have to augment it with a 1: $[0.18,0,1]^T$. 
+We can now compute the position of the end-effector by multiplying it with the transformation matrix for our first joint. Let's say we want to rotate the second joint by 0.5. In the transformation matrix we replace $\phi$ with 0.5, x with 0.15 and y with 0. Why 0.15 and 0 for x and y? This is the position of the second joint. The initial point of the end-effector is the same as before, i.e. (0.33, 0), but as the first link of the robot is included in the transformation, our point is now (0.33-0.15,0) = (0.18,0). To be able to multiply it with a 3x3 matrix, we have to augment it with a 1: $[0.18,0,1]^T$. 
 
 $$
 p_{ee} =
