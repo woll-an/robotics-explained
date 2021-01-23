@@ -19,9 +19,6 @@ export default class HTML extends React.Component {
           {config.siteMetadata.ogImage ? (
             <meta property="og:image" content={config.siteMetadata.ogImage} />
           ) : null}
-          {config.siteMetadata.favicon ? (
-            <link rel="shortcut icon" type="image/svg" href={config.siteMetadata.favicon} />
-          ) : null}
           <noscript key="noscript"></noscript>
           {this.props.headComponents}
         </head>

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 
+import CookieConsent from 'react-cookie-consent';
 import ThemeProvider from './theme/themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
@@ -67,6 +68,18 @@ const Layout = ({ children, location }) => (
   <ThemeProvider location={location}>
     <MDXProvider components={mdxComponents}>
       <Wrapper>
+        <CookieConsent
+            location="bottom"
+            buttonText="Accept"
+            declineButtonText="Decline"
+            enableDeclineButton
+            flipButtons
+            style={{ background: "#000B17" }}
+            buttonStyle={{ background: "#1ED3C6", color: "#000", fontFamily:"Montserrat" }}
+            declineButtonStyle={{ background: "#bdfffa", color:"#aaa", fontFamily:"Montserrat" }}
+            cookieName="gatsby-gdpr-google-analytics">
+          This site uses cookies ...
+        </CookieConsent>
         <LeftSideBarWidth className={'hiddenMobile'}>
           <Sidebar location={location} />
         </LeftSideBarWidth>

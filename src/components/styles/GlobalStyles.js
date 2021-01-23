@@ -826,4 +826,14 @@ export const baseStyles = css`
     white-space: normal;
     text-indent: 0;
   }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .katex::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .katex {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 `;

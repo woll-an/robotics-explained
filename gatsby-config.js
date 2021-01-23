@@ -49,14 +49,15 @@ const plugins = [
     }
   },
   {
-    resolve: `gatsby-plugin-gtag`,
+    resolve: `gatsby-plugin-gdpr-cookies`,
     options: {
-      // your google analytics tracking id
-      trackingId: '',
-      // Puts tracking script in the head instead of the body
-      head: true,
-      // enable ip anonymization
-      anonymize: false,
+      googleAnalytics: {
+        trackingId: 'G-M8QHGMRE4H',
+        // Setting this parameter is optional
+        anonymize: true
+      },
+      // Defines the environments where the tracking should be available  - default is ["production"]
+      environments: ['production', 'development']
     },
   },
   {
