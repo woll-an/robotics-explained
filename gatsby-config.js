@@ -3,6 +3,7 @@ const config = require("./config");
 const plugins = [
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
+  'gatsby-plugin-catch-links',
   {
     resolve: `gatsby-plugin-layout`,
     options: {
@@ -35,15 +36,9 @@ const plugins = [
             maxWidth: 1035,
           }
         },
-        {
-          resolve: 'gatsby-remark-copy-linked-files'
-        },
-        {
-          resolve: 'gatsby-remark-katex'
-        },
-        {
-          resolve: 'gatsby-remark-relative-images'
-        }
+        'gatsby-remark-copy-linked-files',
+        'gatsby-remark-katex',
+        'gatsby-remark-relative-images',
       ],
       extensions: [".mdx", ".md"]
     }
