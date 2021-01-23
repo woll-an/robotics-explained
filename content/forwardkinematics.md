@@ -18,7 +18,7 @@ $$T(q)_{O,ee} = T(q_0)_{O,0} \cdot T(q_0)_{0,1} \cdot T(q_0)_{1,2} \cdot T_{2,ee
 
 Each of these transformations are simple rotations and translations depending on the joint angle and the link length.
 
-<iframe src="https://condescending-yonath-40074b.netlify.app" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="https://kinematics.robotics-explained.com" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
 # Transformations for each joint
 

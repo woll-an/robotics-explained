@@ -816,7 +816,8 @@ export const baseStyles = css`
     display: inline-block;
     white-space: nowrap;
     max-width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     text-align: initial;
   }
   .katex {

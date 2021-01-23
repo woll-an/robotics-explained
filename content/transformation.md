@@ -12,7 +12,7 @@ You can see the robot I just described in the following interactive demo. To def
 
 If you move the slider for the first joint (q0), the end-effector will make a circular movement around the origin.
 
-<iframe src="https://condescending-yonath-40074b.netlify.app?q1=0&q2=0" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="https://kinematics.robotics-explained.com?q1=0&q2=0" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
 The pose of the tip of the end-effector depends on the angle of the first joint. How can we compute the new pose of the end-effector given the angle $\phi$? To rotate a point counter clockwise by an angle $\phi$, we can use a so-called *rotation matrix* to compute the transformed point. The rotation matrix might look in the beginning a bit scary, but it is super useful!
 
@@ -50,7 +50,7 @@ We are now able to compute every point the end-effector can reach by moving the 
 
 Let's look at what happens if we only move the second joint.
 
-<iframe src="https://condescending-yonath-40074b.netlify.app?q0=0&q2=0" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="https://kinematics.robotics-explained.com?q0=0&q2=0" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
 The tip of the end-effector rotates now around this joint with a smaller radius than before. We can therefore use a similar rotation matrix as the one for the first joint. But additional to this rotation, we have a translation of the center of this point by $[0.15m, 0]^T$. How can we now compute the position of the end-effector? We can use a *transformation matrix* which combines rotation and translation in a single 3x3 matrix. It consists of the rotation matrix, the translation vector $[x,y]^T$ and $[0,0,1]$ in the last row. The last row seems to be unnecessary, but you will see soon, that it comes very handy!
 
