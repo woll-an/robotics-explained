@@ -62,7 +62,7 @@ const plugins = [
         cookieName: 'gatsby-gdpr-facebook-pixel', // default
       },
       // Defines the environments where the tracking should be available  - default is ["production"]
-      environments: ['production', 'development']
+      // environments: ['production', 'development']
     },
   },
   {

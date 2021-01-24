@@ -10,9 +10,9 @@ One quick note about the notation: In the literature you often find a distinctio
 
 # Chaining Transformations
 
-Back to the main problem: Our goal is to develop a transformation matrix $T(q)_{O,ee}$ which allows us to compute the pose of the end-effector given the configuration of the robot. $T_{O,ee}$ is the transformation from the origin (O) to the end-effector (ee).
+Back to the main problem: Our goal is to develop a transformation matrix $T(q)_{O,ee}$ which allows us to compute the pose of the end-effector given the configuration of the robot. $T_{O,ee}$ is the transformation from the origin (O) to the end-effector (ee). We know the geometry of the three links and we have sensors which measure the rotation of the three joints. We can express the rotation from each joint plus the translation due to the geometry of the link as a transformation matrix. Additionally, we have the transformation from the origin to the first joint. 
 
-As we learned in the article about [transformation matrices](/transformation) we can construct the transformation matrix by chaining multiple transformation matrices, for our robot arm i.e.
+As we learned in the article about [transformation matrices](/transformation) we can chain multiple transformation matrices together and to get the overall transformation from the origin to the tip of the endeffector. For our robot, i.e.
 
 $$T(q)_{O,ee} = T(q_0)_{O,0} \cdot T(q_0)_{0,1} \cdot T(q_0)_{1,2} \cdot T_{2,ee}$$
 
