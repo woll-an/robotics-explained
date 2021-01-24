@@ -35,7 +35,7 @@ export default {
     </StyledPre>
   ),
   code: CodeBlock,
-  a: AnchorTag,
+  // a: AnchorTag,
   // TODO add `img`
   // TODO add `blockquote`
   // TODO add `ul`
