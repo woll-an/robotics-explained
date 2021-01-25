@@ -80,7 +80,7 @@ const Layout = ({ children, location }) => (
             buttonStyle={{ background: "#1ED3C6", color: "#000", fontFamily:"Montserrat" }}
             declineButtonStyle={{ background: "#bdfffa", color:"#aaa", fontFamily:"Montserrat" }}
             cookieName="gatsby-gdpr-google-analytics">
-          This site uses cookies and other tracking technologies to improve your browsing experience on our website, to analyze our website traffic, and to understand where visitors are coming from.
+          This site uses cookies and other tracking technologies to improve your browsing experience on the website, to analyze website traffic, and to understand where visitors are coming from.
         </CookieConsent>
         <LeftSideBarWidth className={'hiddenMobile'}>
           <Sidebar location={location} />
