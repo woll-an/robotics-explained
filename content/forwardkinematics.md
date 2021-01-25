@@ -67,6 +67,26 @@ T_{2,ee}
 $$
 
 By multiplying all these transformation matrices, we get $T(q)_{O,ee}$, the transformation from the origin to the end-effector.
+
+$$
+T_{O,ee}
+= \begin{bmatrix}
+cos(\phi_{O,ee}) & -sin(\phi_{O,ee}) & x_{O,ee} \\
+sin(\phi_{O,ee}) & cos(\phi_{O,ee}) & y_{O,ee} \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+with
+
+$$\phi_{O,ee} = q_0+q_1+q_2$$
+
+$$x_{O,ee} = 0.15 \cdot cos(q_0) + 0.15 \cdot cos(q_0+q_1) + 0.03 \cdot cos(q_0+q_1+q_2)$$
+
+$$y_{O,ee} = 0.15 \cdot sin(q_0) + 0.15 \cdot sin(q_0+q_1) + 0.03 \cdot sin(q_0+q_1+q_2)$$
+
+The angle of the end-effector with respect to the origin is the sum of the angles of all three joints. You can play around with the interactive demo to validate this finding. The x and y components of the end-effector's position are a bit more complicated, but we can find a certain pattern. For each joint we multiply its length with the cos (or sin for the y-component) of its angle with respect to the origin.
+
 Given the configuration of the robot, we can now compute the Cartesian coordinates of the tip of the end-effector! This is called *forwards kinematics*. Please take a moment to think about what we just achieved with such a transformation! We are now able to understand our robot when we ask where it is, because it is able to translate its inner configuration into a system which has a meaning for us.
 
 >You: "Hey, where are you?"  
