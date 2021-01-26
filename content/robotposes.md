@@ -1,7 +1,7 @@
 ---
 title: "Robot Pose"
 metaTitle: "Robot Pose | Robotics Explained"
-metaDescription: "This article explains what robot poses are and why they are important in robotics."
+metaDescription: "Robot poses are used to describe the position and rotation of a robot's end-effector in the workspace."
 ---
 
 # The Cartesian space

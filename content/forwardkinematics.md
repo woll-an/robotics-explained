@@ -1,7 +1,7 @@
 ---
 title: "Forward Kinematics"
 metaTitle: "Forward kinematics | Robotics Explained"
-metaDescription: "This article is about forward kinematics in robotics."
+metaDescription: "Forwards kinematics allows us to compute the pose of the robot's end-effector given the configuration of its joints."
 ---
 
 Kinematics is the relationship between the geometry of the robot and its movement in the Cartesian space. We take into account the configuration of the robot and the length of the joints. A configuration describes the state of the robot's parts we have control over. For a robot arm the configuration is the state of the motors - the rotational joints. We can measure how far a motor turned from an initial position. For a robot with three motors we express this with a three dimensional vector q, where each row is the rotation of one of the joints in radiant, e.g. $q = [0.5,0,1]^T$.

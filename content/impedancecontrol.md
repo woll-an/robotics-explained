@@ -1,7 +1,7 @@
 ---
 title: "Impedance Control"
 metaTitle: "Impedance Control | Robotics Explained"
-metaDescription: "This article explains how robots can be controlled with impedance control"
+metaDescription: "Impedance control allows us to control how the robot behaves during an interaction with the environment."
 ---
 
 In this chapter I explain what impedance control is about. Whenever robots are mentioned in this article, I have those consisting of links and joints in mind, with end-effectors to manipulate their environment.

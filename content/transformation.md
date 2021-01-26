@@ -1,7 +1,7 @@
 ---
 title: "Transformation matrix"
 metaTitle: "Transformation matrix | Robotics Explained"
-metaDescription: "This article is about transformation matrices and why they are important in robotics."
+metaDescription: "Transformation matrices are a mathematical representation of combined rotation and translation."
 ---
 
 # Rotation matrix
