@@ -1,10 +1,10 @@
 ---
-title: "Transformation matrix"
-metaTitle: "Transformation matrix | Robotics Explained"
-metaDescription: "Transformation matrices are a mathematical representation of combined rotation and translation."
+title: "Transformation matrices"
+metaTitle: "Transformation matrices | Robotics Explained"
+metaDescription: "This article is about transformation matrices and why they are important in robotics."
 ---
 
-# Rotation matrix
+# Rotation matrices
 
 Let's say we have a robot arm in a two-dimensional space with three links. Links are the static structures of the robot, comparable to our bones. The links are connected by rotational joints. A rotational joint is similar to our elbow. If we move only the forearm, our hand makes a circular motion around the elbow. The "hand" of the robot - i.e. the last link - is the so-called end-effector. It is designated to interact with the environment.
 
@@ -46,7 +46,7 @@ $$
 
 The robot with one moving joint has a degree of freedom of one. This means we can choose only the value of one of the three degrees of freedom of the two-dimensional space, the other ones are fixed. If we want to move e.g. to y = 0.33, x has to be 0 and the orientation has to be 0.5 $\pi$. If we want a rotation of 0.5, x has to be 0.28 and y has to be 0.16. We are not able to move e.g. to y = 0.33 and x = 0.1.
 
-# Transformation matrix
+# Transformation matrices
 
 We are now able to compute every point the end-effector can reach by moving the first joint. But these points lie all in a circle around the base point, which is not very useful for a robot. We want to be able to reach every point in the workspace with an arbitrary rotation of the end-effector.
 
