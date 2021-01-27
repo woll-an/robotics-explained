@@ -25,7 +25,7 @@ sin(\phi) & cos(\phi) \\
 \end{bmatrix}
 $$
 
-By multiplying a point with this matrix, we get the position of the rotated point. If we rotate for example the point (0.33, 0) by 0.5 rad, we get the new position of the end-effector at (0.28, 0.16).
+By multiplying a point with this matrix, we get the position of the rotated point. If we rotate for example the position of the end-effector (0.33, 0) by 0.5 rad, we get the new position at (0.28, 0.16).
 
 $$
 p_{ee} = \begin{bmatrix}
