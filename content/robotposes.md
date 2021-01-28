@@ -49,6 +49,8 @@ We therefore use a so-called *pose* to describe how the robot is positioned. In 
 * the y-coordinate 
 * an angle $\phi$ for the rotation
 
+![pose](../images/robotposes/pose.png "Pose")
+
 The end-effector cannot move without changing one of these values. If we defined our pose to consist only of the x-coordinate and the angle $\phi$, the robot could move vertically, without changing its pose. We therefore say that the two-dimensional space has three *degrees of freedom*. Things get more complicated the more dimensions we take into account. In three dimensional space we need the x-, y-, and z-coordinates as well as three angles (e.g. roll, pitch, yaw) to describe the pose: It has six degrees of freedom. The four dimensional space already has ten degrees of freedom.
 
 # Robot kinematics
