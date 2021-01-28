@@ -33,9 +33,9 @@ What do you do?
 >Friend: "I'm at 22°13'27.8"N 22°06'55.7"E"  
 >You: "Cool, I will be there in twenty hours."  
 
-You take a GPS device and and twenty hours later, you arrive at the said point. Great! What changed? You used the geographic coordinate system which specifies exactly each point on the surface of the earth and a device which translates its state into the language of this system.
+You take a GPS device and twenty hours later, you arrive at the said point. Great! What changed? You used the geographic coordinate system which specifies exactly each point on the surface of the earth and a device which translates its state into the language of this system.
 
-We can talk in a similar way to robots. We take the space in which the robot can move - the *workspace* - and use a system which is able to describe every point within this space. In robotics, we often use the *Cartesian space*. This is just a fancy name for the well known coordinate system with an x- and y-axes (and z-axes in three dimensional space) we draw a thousand times in school.
+We can talk in a similar way to robots. We take the space in which the robot can move - the *workspace* - and use a system which is able to describe every point within this space. In robotics, we often use the *Cartesian space*. This is just a fancy name for the well known coordinate system with an x- and y-axes (and z-axes in three dimensional space) we drew a thousand times in school.
 
 # Robot poses and degrees of freedom
 
