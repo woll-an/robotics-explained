@@ -26,7 +26,7 @@ $$y_{O,ee} = 0.15 \cdot sin(q_0) + 0.15 \cdot sin(q_0+q_1) + 0.03 \cdot sin(q_0+
 
 # Geometric Inverse Kinematics
 
-However, in this article I want to show you a goemetric approach. In the following image you see our robot with an arbitrary pose. Given x, y and $\phi$, we want to compute the three joint angles $q_0$, $q_1$ and $q_2$. I marked three trianlges in the image, a green, red and blue one. Let's look what we know about these triangles.
+However, in this article I want to show you a goemetric approach. In the following image you see our robot with an arbitrary pose. Given x, y and $\phi$, we want to compute the three joint angles $q_0$, $q_1$ and $q_2$. I marked four trianlges in the image, a green, red, yellow and blue one. Let's look what we know about these triangles.
 
 ![geometric](../images/inverse/geometric.png "Geometric Inverse Kinematics")
 
@@ -46,10 +46,32 @@ $$
 
 ## Red triangle
 
-This one is really simple. We just use the Pythagorean theorem to compute the hypotenuse r by using the x- and y- coordinate of $p_2$.
+The red triangle has a right angle at the bottom right corner. We can therefore use the Pythagorean theorem to compute the hypotenuse r by using the x- and y- coordinate of $p_2$.
 
 $$r^2 = x'^2 + y'^2$$
 
+Furthermore, we can compute the the angle at the bottom left corner with $atan\Big(\frac{x'}{y'}\Big)$
+
 ## Blue triangle
+
+Now things get more complicated! The blue triangle has no right angle. We use thefore the *Law of cosines* $a^2=b^2+c^2-2bc\cos\alpha$ where a, b and c are the sides of the triangle and $\alpha$ is the angle between the sides b and c. In our triangle, $a = r$, $b = l_0$, $c = l_1$ and $\alpha = \pi - q_1$. By rearranging the formula and plugging in the equation for $r^2$ from the red triangle, we are able to compute the angle of the second joint $q_1$.
+
+$$q_1  = acos\Big(\frac{x'^2 + y'^2 - l_0^2 - l_1^2}{2l_0l_1}\Big)$$
+
+## Yellow triangle
+
+The yellow triangle has a right angle at the top. We therefore know, that the side right of the right angle has the length $l_1 \cdot cos(q_1)$ and the side left of the right angle has the length $l_1 \cdot sin(q_1)$
+
+## Blue-yellow triangle
+
+The angle of the first joint $q_0$ is the sum of the bottom left angles of the blue and the red triangle. We already computed the angle for the red triangle. The angle for the blue triangle can be computed by looking at the triangle consisting of the blue and the yellow triangle. It has a right angle at the top. The angle at the bottom left is therefore $-atan\Big(\frac{l_1 \cdot sin(q_1)}{l_0 + l_1 \cdot cos(q_1)}\Big)$ and we can compute $q_0$
+
+$$q_0 = atan\Big(\frac{x'}{y'}\Big) - atan\Big(\frac{l_1 \cdot sin(q_1)}{l_0 + l_1 \cdot cos(q_1)}\Big)$$
+
+The only angle missing is now $q_2$. We can compute it with $q_2 = \phi - q_1 - q_0$.
+
+## Putting it all together
+
+In the interactive demo below, you can see the inverse kinematics in action. With the sliders on top you can modify x, y and $\phi$. At the bottom you see the values for the three joint angles. The demo uses exactly the formulas we just developed.
 
 <iframe src="https://kinematics.robotics-explained.com?inverse" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
