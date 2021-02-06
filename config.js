@@ -10,6 +10,7 @@ const config = {
       '/robotposes', // add trailing slash if enabled above
       '/transformation',
       '/forwardkinematics',
+      '/inversekinematics',
       '/impedancecontrol',
     ],
     // collapsedNav: [
