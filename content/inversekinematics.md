@@ -18,7 +18,7 @@ Unfortunately there is no one size fits all solution. Depending on the robot, th
 
 # Algebraic Inverse Kinematics
 
-For algebraic inverse kinematics, an equation system is constructed and solved. For our planar robot we can use the three equations for the forwards kinematics and solve them for $q_0$, $q_1$ and $q_2$. These equation are
+For algebraic inverse kinematics, an equation system is set up and solved. For our planar robot we could use the three equations for the forwards kinematics and solve them for $q_0$, $q_1$ and $q_2$. These equation are
 
 $$\phi_{O,ee} = q_0+q_1+q_2$$
 
@@ -26,19 +26,19 @@ $$x_{O,ee} = l_0 \cdot cos(q_0) + l_1 \cdot cos(q_0+q_1) + l_2 \cdot cos(q_0+q_1
 
 $$y_{O,ee} = l_0 \cdot sin(q_0) + l_1 \cdot sin(q_0+q_1) + l_2 \cdot sin(q_0+q_1+q_2)$$
 
-where $l_0$, $l_1$ and $l_2$ are the lengths of the links.
+where $l_0$, $l_1$ and $l_2$ are the lengths of the links. With a good mathematical software solving these equations would be a matter of plugging in the formulas and waiting for a solution. However, in this article I want to show you a goemetric approach.
 
 # Geometric Inverse Kinematics
 
-However, in this article I want to show you a goemetric approach. As the name suggests, we use a lot of trigonometry. It is helpful to have the definitions of sine, cosine and tangent in mind. We also use the Pythagorean theorem and the law of cosines.
+As the name of this approach suggests, we are going to use a lot of trigonometry. TO be prepared for the next sections, it is helpful to have the definitions of sine, cosine and tangent in mind. We also use the Pythagorean theorem and the law of cosines.
 
-In the following image you see our robot with an arbitrary pose. Given x, y and $\phi$, we want to compute the three joint angles $q_0$, $q_1$ and $q_2$. I marked four trianlges in the image, a green, red, yellow and blue one. Let's look what we know about these triangles.
+In the following image you see our robot with an arbitrary pose. Given x, y and $\phi$, we want to compute the three joint angles $q_0$, $q_1$ and $q_2$. I marked four triangles in the image, a green, red, yellow, and blue one. Let's look what we know about these triangles.
 
 ![geometric](../images/inverse/geometric.png "Geometric Inverse Kinematics")
 
 ## Green triangle
 
-We already know a lot about the green triangle. It has a right angle at the bottom right, the bottom left is equal to $\phi$, its hypotenuse is equal to the length of the end-effector $l_2$ and the corner at the top has the position (x,y). With this information we can compute the position of $p_2$, the center of the joint of the end-effector. With the definition of sine and cosine, we can compute the length of the bottom side of the rectangle with $l_2 \cdot sin(\phi)$ and the right side of the triangle with $l_2 \cdot cos(\phi)$. The point $p_2$ is therefore defined as
+We already know a lot about the green triangle. It has a right angle at the bottom right, the bottom left is equal to $\phi$, its hypotenuse is equal to the length of the end-effector $l_2$ and the corner at the top has the position (x,y). With this information we can compute the position of $p_2$, the center of the joint connected to the end-effector. With the definition of sine and cosine, we can compute the length of the bottom side of the rectangle with $l_2 \cdot sin(\phi)$ and the right side of the triangle with $l_2 \cdot cos(\phi)$. The point $p_2$ is therefore defined as
 
 $$
 p_2 = \begin{bmatrix}
@@ -66,11 +66,11 @@ $$q_1  = acos\Big(\frac{x'^2 + y'^2 - l_0^2 - l_1^2}{2l_0l_1}\Big)$$
 
 ## Yellow triangle
 
-The yellow triangle has a right angle at the top. We therefore know, that the side right of the right angle has the length $l_1 \cdot cos(q_1)$ and the side left of the right angle has the length $l_1 \cdot sin(q_1)$
+The yellow triangle has a right angle at the top. We therefore know, that the side right to the top angle has the length $l_1 \cdot cos(q_1)$ and the side left to the top angle has the length $l_1 \cdot sin(q_1)$
 
 ## Blue-yellow triangle
 
-The angle of the first joint $q_0$ is the sum of the bottom left angles of the blue and the red triangle. We already computed the angle for the red triangle. The angle for the blue triangle can be computed by looking at the triangle consisting of the blue and the yellow triangle. It has a right angle at the top. The angle at the bottom left is therefore $-atan\Big(\frac{l_1 \cdot sin(q_1)}{l_0 + l_1 \cdot cos(q_1)}\Big)$ and we can compute $q_0$ with
+The angle of the first joint $q_0$ is the sum of the bottom left angles of the blue and the red triangle. We already computed this angle for the red triangle. The angle for the blue triangle can be computed by looking at the triangle consisting of the blue and the yellow triangle. It has a right angle at the top. The angle at the bottom left is therefore $-atan\Big(\frac{l_1 \cdot sin(q_1)}{l_0 + l_1 \cdot cos(q_1)}\Big)$. We can compute $q_0$ with
 
 $$q_0 = atan\Big(\frac{x'}{y'}\Big) - atan\Big(\frac{l_1 \cdot sin(q_1)}{l_0 + l_1 \cdot cos(q_1)}\Big)$$
 
