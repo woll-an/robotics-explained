@@ -11,6 +11,7 @@ const config = {
       '/transformation',
       '/forwardkinematics',
       '/inversekinematics',
+      '/jacobian',
       '/impedancecontrol',
     ],
     // collapsedNav: [
