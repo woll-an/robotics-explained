@@ -6,7 +6,7 @@ metaDescription: "The robot Jacobian is the relationship between the angular vel
 
 We now know how the position of the end-effector in the Cartesian space relates to the configuration of the robot. But robots are no statues, they move around quite a lot and we are interested how fast they are moving.
 
-# Velocity
+# Linear and angular velocity
 
 Let's refresh quickly our knowledge about velocity. In school we learned that velocity is the distance over time or te be more precise the rate of change of the position, i.e. its time derivative. The linear velocity $v$ can be computed by
 
@@ -43,7 +43,7 @@ l_1 \cdot cos(q_1)
 \end{bmatrix}
 $$
 
-# Jacobian
+# Jacobian matrix
 
 I wrote now a lot about angular and linear velocity without mentioning once the title of this chapter, the Jacobian. It is a matrix named after the mathematician Jacobi. In robotics we use it to express the relationship between the angular velocity of the joints and the linear and angular velocity of the end-effector, i.e.
 
