@@ -13,6 +13,7 @@ const config = {
       '/inversekinematics',
       '/jacobian',
       '/singularity',
+      '/dynamics',
       '/impedancecontrol',
     ],
     // collapsedNav: [
