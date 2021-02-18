@@ -12,4 +12,6 @@ When the robot moves, there are a lot of forces acting on the robot. One compone
 
 Other forces acting on the robot are gravitational forces. They are present all the time, even when the robot is not moving. Hoewever, if you want to operate your robot in space, you can ignore this paragraph. The gravitational forces are dependent on the joint configuration $q$. If you extend your arm you need much more power to hold it up compared to just let it hang at your side. This is the same for the robot.
 
-The last component are centrifugal and Coriolis forces. These depend on the joint configuration and the velocity.
+The last component are centrifugal and Coriolis forces. These depend on the joint configuration and the velocity. You are probably familiar with contrifugal forces. It is the force which holds the water in the bucket when you swirl it around. It acts radial to the axis of rotation and is proportional to the mass, the distance from the axis and the square of the (angular) velocity.
+
+The Coriolis force is a bit harder to grasp. Imagine you are travelling in a straight line on top of the earth surface to the north. A visitor in a space ship observes you. The path of your travel does not appear as a straight line to the north for the visitor, even though it does for you. This is because of the rotation of the earth. The visitor oberserves an additional eastward motion. The force causing this motion is called Coriolis force.
