@@ -24,7 +24,7 @@ Besides the forces listed above, there could also be external forces acting on t
 
 # Inverse Dynamics
 
-To counteract these forces, torques are applied in the joints. This is similar to engaging our muscles when we bring our body in an upright position. The torque $\tau$ required can be computed by summing the terms for all the forces we listed above. $\tau$ is a vector with a dimension for each joint. We have a term for the mass ($M(q) \ddot{q}$), Coriolos and centrifugal terms ($C(q,\dot{q})$) and gravitational terms $g(q)$.
+To counteract these forces, torques are applied in the joints. This is similar to engaging our muscles when we bring our body in an upright position. The torque $\tau$ required can be computed by summing the terms for all the forces we listed above. $\tau$ is a vector with one dimension for each joint. We have a term for the mass $M(q) \ddot{q}$, Coriolos and centrifugal terms $C(q,\dot{q})$ and gravitational terms $g(q)$.
 
 $$ \tau = M(q) \ddot{q} + C(q,\dot{q}) + g(q) - \tau_{ext}$$
 
