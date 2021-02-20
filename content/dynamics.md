@@ -12,11 +12,11 @@ $$\tau = J(q)^T \cdot f$$
 
 # Forces acting on the robot
 
-When the robot moves, there are a lot of forces acting on the robot. One component is the force from the acceleration of the robot. It can be computed by $M(q) \cdot \ddot{q}$, where $M$ is the mass matrix and $\ddot{q}$ the joint acceleration. The mass matrix depends on the joint angles $q$ as it makes a difference if the arm is stretched or bent. This might seem unintuitiv, as the actual mass does not change. However, the resistance of a physical object to change its velocity - the inertia - does depend on the mass and also mass distribution of the object. This is the reason why an ice dancer can control the velocity of the rotation in a pirouette by extending their arms.
+When the robot moves, there are a lot of forces acting on the robot. One component is the force from the acceleration of the robot. It can be computed by multiplying the robot's mass with its joint acceleration. We specify the robot's mass with the so called mass or inertia matrix $M(q)$. The mass matrix depends on the joint angles $q$ as it makes a difference if the arm is stretched or bent. This might seem unintuitiv, as the actual mass does not change. However, the resistance of a physical object to change its velocity - the inertia - does depend on the mass and also mass distribution of the object. This is the reason why an ice dancer can control the velocity of the rotation in a pirouette by extending their arms.
 
 Other forces acting on the robot are gravitational forces. They are present all the time, even when the robot is not moving. Hoewever, if you want to operate your robot in space, you can ignore this paragraph. The gravitational forces are dependent on the joint configuration $q$. If you extend your arm you need much more power to hold it up compared to just let it hang at your side. This is the same for the robot.
 
-The last component are centrifugal and Coriolis forces. These depend on the joint configuration and the velocity. You are probably familiar with contrifugal forces. It is the force which holds the water in the bucket when you swirl it around. It acts radial to the axis of rotation and is proportional to the mass, the distance from the axis and the square of the (angular) velocity.
+The last component are centrifugal and Coriolis forces. These depend on the joint configuration and the velocity. You are probably familiar with the contrifugal force. It is the force which holds the water in the bucket when you swirl it around. It acts radial to the axis of rotation and is proportional to the mass, the distance from the axis and the square of the (angular) velocity.
 
 The Coriolis force is a bit harder to grasp. Imagine you are travelling in a straight line on top of the earth surface to the north. A visitor in a space ship observes you. The path of your travel does not appear as a straight line to the north for the visitor, even though it does for you. Because of the rotation of the earth, the visitor oberserves an additional eastward motion. The force causing this motion is called Coriolis force.
 
@@ -28,4 +28,4 @@ To counteract these forces, torques are applied in the joints. This is similar t
 
 $$ \tau = M(q) \ddot{q} + C(q,\dot{q}) + g(q) - \tau_{ext}$$
 
-This formula is called the inverse dynamics, as we can compute the torque required given the joint position, velocity and acceleration.
+This formula is called the inverse dynamics, as we can compute the torque required given the joint position, velocity and acceleration. In practice, $M(q)$, $C(q, \dot{q})$ and $g(q)$ are often determined with the help of modelling software.
