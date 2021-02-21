@@ -29,3 +29,9 @@ To counteract these forces, torques are applied in the joints. This is similar t
 $$ \tau = M(q) \ddot{q} + C(q,\dot{q}) + g(q) - \tau_{ext}$$
 
 This formula is called the inverse dynamics, as we can compute the torque required given the joint position, velocity and acceleration. In practice, $M(q)$, $C(q, \dot{q})$ and $g(q)$ are often determined with the help of modelling software.
+
+# Forwards Dynamics
+
+When there is an inverse dynamics, there is of course also a forwards dynamics. It allows us to compute the joint acceleration given the torques currently applied. We can derive it by rearranging the equation for the inverse dynamics.
+
+$$\ddot{q} = M(q)^{-1} (\tau - C(q,\dot{q}) - g(q) + \tau_{ext}) $$
