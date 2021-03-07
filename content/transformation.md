@@ -14,7 +14,7 @@ A quick note about units: For readability I often omit units when I think it is 
 
 But back to our robot. If you move the slider for the first joint (q0), the end-effector will make a circular movement around the origin.
 
-<iframe src="https://kinematics.robotics-explained.com?q1=0&q2=0" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="https://kinematics.robotics-explained.com?q1&q2" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
 The pose of the tip of the end-effector depends on the angle of the first joint. How can we compute the new pose of the end-effector given the angle $\phi$? To rotate a point counter clockwise by an angle $\phi$, we can use a so-called *rotation matrix* to compute the transformed point. The rotation matrix might look in the beginning a bit scary, but it is super useful!
 

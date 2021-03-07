@@ -22,6 +22,7 @@ The Coriolis force is a bit harder to grasp. Imagine you are travelling in a str
 
 Besides the forces listed above, there could also be external forces acting on the robot, for example if it is in contact with a surface or carrying payload.
 
+
 # Inverse Dynamics
 
 To counteract these forces, torques are applied in the joints. This is similar to engaging our muscles when we bring our body in an upright position. The torque $\tau$ required can be computed by summing the terms for all the forces we listed above. $\tau$ is a vector with one dimension for each joint. We have a term for the mass $M(q) \ddot{q}$, Coriolos and centrifugal terms $C(q,\dot{q})$ and gravitational terms $g(q)$.
@@ -29,6 +30,10 @@ To counteract these forces, torques are applied in the joints. This is similar t
 $$ \tau = M(q) \ddot{q} + C(q,\dot{q}) + g(q) - \tau_{ext}$$
 
 This formula is called the inverse dynamics, as we can compute the torque required given the joint position, velocity and acceleration. In practice, $M(q)$, $C(q, \dot{q})$ and $g(q)$ are often determined with the help of modelling software.
+
+In the following interactive demo, you can change the torque acting on each of the joints by using the sliders. Try to bring the robot in a position where it is stretched pointing to the left. You will see that the applied torques will have different effects on the robot depending on the configuration.
+
+<iframe src="https://kinematics.robotics-explained.com?dynamics" title="Robot Kinematics" width="100%" height="500" frameborder="0"></iframe>
 
 # Forwards Dynamics
 
