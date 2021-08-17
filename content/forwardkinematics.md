@@ -14,7 +14,7 @@ Back to the main problem: Our goal is to develop a transformation matrix $T(q)_{
 
 As we learned in the article about [transformation matrices](/transformation) we can chain multiple transformation matrices together and to get the overall transformation from the origin to the tip of the end-effector. For our robot, i.e.
 
-$$T(q)_{O,ee} = T(q_0)_{O,0} \cdot T(q_0)_{0,1} \cdot T(q_0)_{1,2} \cdot T_{2,ee}$$
+$$T(q)_{O,ee} = T(q_0)_{O,0} \cdot T(q_1)_{0,1} \cdot T(q_2)_{1,2} \cdot T_{2,ee}$$
 
 Each of these transformations are simple rotations and translations depending on the joint angle and the link length.
 
