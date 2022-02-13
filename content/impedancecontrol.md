@@ -13,7 +13,7 @@ Mechanical impedance is a measure how much a structure resists motion when subje
 
 ![swing](../images/impedance/swing.png "Swing")
 
-So let’s introduce some formulas. Z is the impedance, F is the force and v is the velocity. Whenever we have a force as an input we talk of impedance, i.e. $F = Z \cdot v$. Whenever we have a velocity as an input we talk of admittance, i.e. $v = Z^{-1}\cdot F$.
+So let’s introduce some formulas. Z is the impedance, F is the force and v is the velocity. Whenever we have a force as an output we talk of impedance, i.e. $F = Z \cdot v$. Whenever we have a velocity as an output we talk of admittance, i.e. $v = Z^{-1}\cdot F$.
 
 Why is this important for robotics? Whenever a robot’s end-effector gets in contact with its environment, both robot and environment react to the contact. The robot acts as an impedance, the environment acts as an admittance. The aim of impedance control is to control both the motion of the robot and its contact forces. To be able to model the connection between force and velocity of the robot, we have to look at mass-spring-damper systems.
 
